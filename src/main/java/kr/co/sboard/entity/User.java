@@ -34,7 +34,7 @@ public class User {
 
     private LocalDateTime leaveDate;
 
-    public UserDTO toDTo(){
+    public UserDTO toDTO(){
         return UserDTO.builder()
                 .userid(userid)
                 .pass(pass)
