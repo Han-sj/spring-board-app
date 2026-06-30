@@ -30,7 +30,7 @@ public class ArticleService {
 
     @GetMapping("")
     public void register(ArticleDTO dto){
-
+        dao.insert(dto);
     }
 
     @GetMapping("")
