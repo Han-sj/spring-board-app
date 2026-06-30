@@ -8,9 +8,7 @@
 <body>
     <div id="wrapper">
         <header>
-            <h3>
-                <a href="/index.html" class="title">Board Project</a>
-            </h3>
+            <th:block th:include="~{/user/_head}"/>
         </header>
         <main id="user">
             <section class="info">
@@ -103,7 +101,7 @@
             </section>
         </main>
         <footer>
-            <p>ⓒCopyright chhak.or.kr</p>
+            <th:block th:include="~{/user/_tail}"/>
         </footer>
     </div>    
 </body>
