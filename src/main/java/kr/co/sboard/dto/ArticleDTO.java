@@ -45,7 +45,6 @@ public class ArticleDTO {
                 .comment(comment)
                 .file(file)
                 .hit(hit)
-                .writer(writer)
                 .regip(regip)
                 .build();
     }

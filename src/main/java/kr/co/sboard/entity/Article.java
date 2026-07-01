@@ -25,11 +25,19 @@ public class Article {
     private int comment;
     private int file;
     private int hit;
-    private String writer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "writer")
+    private User user;
+
     private String regip;
 
     @CreationTimestamp
     private LocalDateTime wdate;
+
+    // 추가 필드, @Transient는 해당 속성을 엔티티 컬럼에서 제외
+    @Transient
+    private String nick;
 
     public ArticleDTO toDTO(){
 
@@ -41,7 +49,7 @@ public class Article {
                 .comment(comment)
                 .file(file)
                 .hit(hit)
-                .writer(writer)
+                .nick(getNick())
                 .regip(regip)
                 .wdate(wdate.toString())
                 .build();

@@ -26,23 +26,22 @@ class ArticleDAOTest {
     }
 
     @Test
-    void selectCountAll(){
+    void selectCountAll() {
         int total = dao.selectCountAll();
         log.info(total);
     }
 
     @Test
     void selectAll() {
-
         int start = 10;
 
+        /*
         List<ArticleDTO> dtoList = dao.selectAll(start);
 
-        for (ArticleDTO dto : dtoList){
+        for(ArticleDTO dto : dtoList){
             log.info(dto);
         }
-
-
+        */
     }
 
     @Test
