@@ -11,6 +11,17 @@
     </select>
 
     <select id="selectAll">
+        select
+            a.*,
+            u.nick
+        from article a
+        join user u on a.writer = u.userid
+        order by a.ano desc
+        limit #{start}, 10;
+    </select>
+
+    <select id="selectCountAll">
+        select count(*) from article;
     </select>
 
     <insert id="insert">
